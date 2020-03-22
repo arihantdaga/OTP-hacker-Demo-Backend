@@ -4,5 +4,12 @@ git init
 # Add Server.js
 git add .
 git commit -am "make it better"
+# At this point if you havent already, Install Heroku CLI. 
 heroku git:remote -a otp-collector
 heroku buildpacks:set heroku/nodejs
+
+# Setting up database (We'll use airtable here.)
+# Create an Airtbale Account. Create a new base. Rename your sheet and fields name
+Go to accounts and generate api key. 
+Copy that into .env file with name AIRTABLE_KEY
+Copy your base id from url and paste in in .env file under the key named AIRTABLE_BASE
